@@ -1,0 +1,28 @@
+{
+  "name": "@hypercolor/circleci-utils",
+  "author": "Andrew Aarestad",
+  "license": "MIT",
+  "version": "1.0.2",
+  "description": "Build scripts for CircleCI",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
+  "private": false,
+  "prepublish": "tsc --build --clean && tsc --build",
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "build_publish": "npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "continuous integration",
+    "circleci"
+  ],
+  "devDependencies": {
+    "@types/node": "18",
+    "typescript": "^5.0.4"
+  }
+}
