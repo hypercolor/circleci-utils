@@ -2,7 +2,7 @@
   "name": "@hypercolor/circleci-utils",
   "author": "Andrew Aarestad",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build scripts for CircleCI",
   "main": "index.js",
   "types": "index.d.ts",
@@ -21,6 +21,10 @@
     "continuous integration",
     "circleci"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypercolor/circleci-utils.git"
+  },
   "devDependencies": {
     "@types/node": "18",
     "typescript": "^5.0.4"
