@@ -47,9 +47,10 @@ export class CiUtils {
     }
   }
 
-  public static async buildProcess(processTag: string, deployTag: string) {
+  public static async buildProcess(processTag: string, deployTag: string, buildArgsList?: string[]) {
+    const buildArgs = buildArgsList?.map((arg) => `--build-arg ${arg}`);
     try {
-      const cmd = `docker build --progress=plain -t ${deployTag} -f Dockerfile.${processTag} .`;
+      const cmd = `docker build --progress=plain -t ${deployTag} -f Dockerfile.${processTag}${buildArgs && (' ' + buildArgs.join(' '))} .`;
       console.log('Building Docker container: ', cmd);
       await spawnCmd(cmd);
       console.log('Build complete');

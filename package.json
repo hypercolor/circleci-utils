@@ -2,7 +2,7 @@
   "name": "@hypercolor/circleci-utils",
   "author": "Andrew Aarestad",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Build scripts for CircleCI",
   "main": "index.js",
   "types": "index.d.ts",
